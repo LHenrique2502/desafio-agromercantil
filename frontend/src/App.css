@@ -1,0 +1,172 @@
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 18, 32, 0.65);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.topbarInner {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.card {
+  background: rgba(17, 26, 46, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.titleRow h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.btnPrimary {
+  border-color: rgba(106, 163, 255, 0.35);
+  background: rgba(106, 163, 255, 0.14);
+}
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.alert {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.alertError {
+  border-color: rgba(255, 106, 122, 0.35);
+  background: rgba(255, 106, 122, 0.10);
+}
+.alertSuccess {
+  border-color: rgba(72, 213, 151, 0.35);
+  background: rgba(72, 213, 151, 0.10);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-size: 14px;
+}
+.table th {
+  color: var(--muted);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 720px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+.field select option {
+  background-color: var(--card);
+  color: var(--text);
+}
+.field select option:disabled {
+  color: var(--muted);
+}
+.field input:disabled {
+  opacity: 0.7;
+}
+
+.fieldError {
+  margin-top: 6px;
+  color: var(--danger);
+  font-size: 12px;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
